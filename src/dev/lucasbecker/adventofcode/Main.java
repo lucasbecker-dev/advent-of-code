@@ -33,14 +33,14 @@ public class Main {
 
         // Part 2
         int similarityScore = 0;
-        for (int i = 0; i < left.size(); i++) {
+        for (Integer leftVal : left) {
             int numAppearances = 0;
-            for (int j = 0; j < right.size(); j++) {
-                if (left.get(i).equals(right.get(j))) {
+            for (Integer rightVal : right) {
+                if (leftVal.equals(rightVal)) {
                     numAppearances += 1;
                 }
             }
-            similarityScore += left.get(i) * numAppearances;
+            similarityScore += leftVal * numAppearances;
         }
         System.out.println("Similarity Score: " + similarityScore);
     }
